@@ -17,7 +17,7 @@ Para executar o app uma chave de API do TMDB é necessária. Ao adquirir a chave
 
 ## Arquitetura
 
-A arquitetura usada no app é baseada no DDD (Domain Driven Design) onde temos camadas com funções previamente definidas.
+A arquitetura usada no app é baseada no DDD (Domain Driven Design) e no Clean Architecture, onde temos camadas com funções previamente definidas.
 
 Camada de apresentação (Presentation): contém os widgets e páginas do aplicativo. Essa camada deve ser independente de qualquer outra camada e deve se comunicar apenas com a camada de aplicação.
 
@@ -49,5 +49,14 @@ lib
 ├── main.dart
 └── app.dart
 ```
+
+* A pasta `core` contém todo o código utilizado entre as outras features
+    * `configs` contém as abstrações e implementações dos serviços de injeção de dependência, rotas e temas
+    * `services` contém as abstrações e implementações dos serviços de `http` e `cache`
+    * `exceptions` contém as exceções do projeto
+
+
+
+
 
 
