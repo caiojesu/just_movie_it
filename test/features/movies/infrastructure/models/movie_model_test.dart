@@ -14,8 +14,8 @@ void main() {
     );
     json = {
       'id': 123,
-      'backdropPath': 'back',
-      'posterPath': 'poster',
+      'backdrop_path': 'back',
+      'poster_path': 'poster',
       'title': 'title',
     };
   });

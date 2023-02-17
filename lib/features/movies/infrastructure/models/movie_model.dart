@@ -6,11 +6,15 @@ part 'movie_model.g.dart';
 
 @JsonSerializable()
 class MovieModel extends MovieEntity {
+  @JsonKey(name: 'backdrop_path')
+  final String backdropPath;
+  @JsonKey(name: 'poster_path')
+  final String posterPath;
   const MovieModel({
     required int id,
     required String title,
-    required String backdropPath,
-    required String posterPath,
+    required this.backdropPath,
+    required this.posterPath,
   }) : super(
           backdropPath: backdropPath,
           id: id,
@@ -22,4 +26,11 @@ class MovieModel extends MovieEntity {
       _$MovieModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$MovieModelToJson(this);
+
+  MovieEntity toEntity() => MovieEntity(
+        id: id,
+        title: title,
+        backdropPath: backdropPath,
+        posterPath: posterPath,
+      );
 }
