@@ -19,13 +19,16 @@ Para executar o app uma chave de API do TMDB é necessária. Ao adquirir a chave
 
 A arquitetura usada no app é baseada no DDD (Domain Driven Design) e no Clean Architecture, onde temos camadas com funções previamente definidas.
 
-Camada de apresentação (Presentation): contém os widgets e páginas do aplicativo. Essa camada deve ser independente de qualquer outra camada e deve se comunicar apenas com a camada de aplicação.
+* Camada de apresentação (Presentation): contém os widgets e páginas do aplicativo. Essa camada deve ser independente de qualquer outra camada e deve se comunicar apenas com a camada de aplicação.
 
-Camada de aplicação (Application): contém os BloCs (ou Use cases), responsável por manter a lógica da aplicação.
+* Camada de aplicação (Application): contém os BloCs (ou Use cases), responsável por manter a lógica da aplicação.
 
-Camada de domínio (Domain): contém as entidades, os objetos de valor, as interfaces dos repositórios e as definições dos casos de uso.
+* Camada de domínio (Domain): contém as entidades, os objetos de valor, as interfaces dos repositórios e as definições dos casos de uso.
 
-Camada de infraestrutura (Infrastructure): contém as implementações dos repositórios e outras classes relacionadas a infraestrutura da aplicação.
+* Camada de infraestrutura (Infrastructure): contém as implementações dos repositórios e outras classes relacionadas a infraestrutura da aplicação.
+    * No projeto é usado o `Repository Pattern` sem o `data source` pois o escopo do projeto é pequeno e essa separação seria apenas uma complexidade a mais.
+
+
 
 ## Estrutura das Pastas
 
