@@ -24,7 +24,7 @@ void main() {
     response = Response('body', 200);
   });
 
-  tearDown(() => client.close());
+  setUpAll(() => registerFallbackValue(UriFake()));
 
   group('HttpService get', () {
     test('should return an HttpResponse when calls to the client succeed',
